@@ -2,64 +2,508 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>YUTO & ARISA | Our Wedding</title>
-<style>
-*{box-sizing:border-box}
-body{margin:0;background:#faf8f4;color:#38352f;font-family:"Georgia","Hiragino Mincho ProN",serif;line-height:1.9}
-.hero{min-height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:32px 20px;background:linear-gradient(#faf8f4dd,#faf8f4dd),linear-gradient(135deg,#e8dfd2,#f8f4ed)}
-.eyebrow{letter-spacing:5px;font-size:11px}
-h1{font-size:clamp(34px,9vw,52px);font-weight:400;letter-spacing:3px;margin:22px 0}
-.date{letter-spacing:4px;font-size:14px}
-.intro{font-size:13px;letter-spacing:2px;margin-top:28px}
-main{max-width:620px;margin:auto;padding:20px}
-section{padding:42px 12px;text-align:center;border-bottom:1px solid #e4ddd2}
-h2{font-size:21px;font-weight:400;letter-spacing:3px}
-.jp{font-size:12px;letter-spacing:2px;color:#958675}
-p{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:14px}
-a{color:inherit}
-.info{background:#f0ebe3;padding:18px;margin:18px 0}
-footer{text-align:center;padding:40px 15px;font-size:11px;letter-spacing:2px}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#14253D">
+  <meta name="description" content="YUTO & ARISA Wedding — 2027.01.23">
+  <title>YUTO & ARISA | Wedding Invitation</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #14253D;
+      --navy-light: #223752;
+      --burgundy: #702B3B;
+      --gold: #C6A565;
+      --ivory: #FAF8F4;
+      --white: #FFFFFF;
+      --ink: #262626;
+      --muted: #69645F;
+      --line: #DED4C5;
+      --serif: "Cormorant Garamond", "Times New Roman", serif;
+      --jp-serif: "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--ivory);
+      color: var(--ink);
+      font-family: var(--jp-serif);
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 2.1;
+      letter-spacing: 0.06em;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 88svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 64px 22px;
+      text-align: center;
+      color: var(--white);
+      background:
+        radial-gradient(ellipse at 50% 40%, rgba(198,165,101,.12), transparent 55%),
+        var(--navy);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 16px;
+      border: 1px solid rgba(198,165,101,.65);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "✧";
+      position: absolute;
+      top: 11%;
+      color: var(--gold);
+      font-size: 24px;
+      font-family: var(--serif);
+    }
+
+    .eyebrow {
+      margin: 0 0 24px;
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: 12px;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(43px, 10vw, 76px);
+      font-weight: 300;
+      line-height: 1.12;
+      letter-spacing: .035em;
+    }
+
+    .ampersand {
+      display: block;
+      margin: 2px 0;
+      color: var(--gold);
+      font-size: .65em;
+      font-style: italic;
+    }
+
+    .hero-subtitle {
+      margin: 27px 0 8px;
+      font-size: 12px;
+      letter-spacing: .2em;
+    }
+
+    .hero-date {
+      margin: 4px 0 0;
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 300;
+      letter-spacing: .15em;
+    }
+
+    .hero-note {
+      margin-top: 34px;
+      color: #E6DFD4;
+      font-size: 11px;
+      letter-spacing: .12em;
+    }
+
+    .scroll-note {
+      position: absolute;
+      bottom: 28px;
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: 10px;
+      letter-spacing: .25em;
+    }
+
+    .navigation {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px 25px;
+      padding: 17px 12px;
+      background: var(--white);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .navigation a {
+      font-family: var(--serif);
+      font-size: 12px;
+      letter-spacing: .08em;
+      color: var(--navy);
+    }
+
+    .section {
+      padding: 76px 24px;
+      text-align: center;
+      scroll-margin-top: 24px;
+    }
+
+    .section-white {
+      background: var(--white);
+    }
+
+    .section-navy {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .section-burgundy {
+      background: var(--burgundy);
+      color: var(--white);
+    }
+
+    .section-label {
+      margin: 0 0 10px;
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: 12px;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+    }
+
+    .section h2 {
+      margin: 0 0 30px;
+      font-family: var(--jp-serif);
+      font-size: 23px;
+      font-weight: 400;
+      letter-spacing: .13em;
+    }
+
+    .section-navy h2,
+    .section-burgundy h2 {
+      color: var(--white);
+    }
+
+    .ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 13px;
+      margin: 25px auto;
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: 17px;
+    }
+
+    .ornament::before,
+    .ornament::after {
+      content: "";
+      width: 42px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .intro {
+      max-width: 490px;
+      margin: 0 auto;
+      font-size: 13px;
+      line-height: 2.4;
+    }
+
+    .names {
+      margin: 28px 0 0;
+      font-family: var(--serif);
+      font-size: 29px;
+      font-weight: 300;
+      letter-spacing: .1em;
+    }
+
+    .date-large {
+      margin: 18px 0 0;
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: 30px;
+      letter-spacing: .1em;
+    }
+
+    .date-detail {
+      margin-top: 0;
+      font-family: var(--serif);
+      font-size: 13px;
+      letter-spacing: .18em;
+    }
+
+    .event-card {
+      max-width: 500px;
+      margin: 0 auto 22px;
+      padding: 28px 20px;
+      border: 1px solid var(--line);
+      background: var(--ivory);
+    }
+
+    .event-number {
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: 13px;
+      letter-spacing: .22em;
+    }
+
+    .event-card h3 {
+      margin: 9px 0;
+      color: var(--navy);
+      font-size: 19px;
+      font-weight: 400;
+      letter-spacing: .12em;
+    }
+
+    .event-card p {
+      margin: 5px 0;
+      font-size: 12px;
+      line-height: 2;
+    }
+
+    .venue-name {
+      margin: 5px 0 14px;
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: 22px;
+      letter-spacing: .04em;
+    }
+
+    .text-link {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 8px 19px;
+      border: 1px solid var(--gold);
+      color: var(--navy);
+      font-family: var(--serif);
+      font-size: 12px;
+      letter-spacing: .1em;
+    }
+
+    .section-navy .text-link,
+    .section-burgundy .text-link {
+      color: var(--white);
+    }
+
+    .closing {
+      padding: 66px 22px;
+      text-align: center;
+      background: var(--ivory);
+    }
+
+    .closing-title {
+      margin: 0;
+      color: var(--navy);
+      font-family: var(--serif);
+      font-size: 35px;
+      font-weight: 300;
+      letter-spacing: .08em;
+    }
+
+    .closing p {
+      margin: 18px auto;
+      font-size: 12px;
+      line-height: 2.3;
+    }
+
+    footer {
+      padding: 27px 16px;
+      text-align: center;
+      color: var(--white);
+      background: var(--navy);
+    }
+
+    footer p {
+      margin: 0;
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: 12px;
+      letter-spacing: .18em;
+    }
+
+    footer small {
+      display: block;
+      margin-top: 8px;
+      color: #E7E1D8;
+      font-size: 10px;
+      letter-spacing: .08em;
+    }
+
+    @media (min-width: 700px) {
+      .hero {
+        min-height: 760px;
+      }
+
+      .section {
+        padding: 100px 30px;
+      }
+
+      .intro {
+        font-size: 14px;
+      }
+
+      .event-card {
+        padding: 35px 30px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header class="hero">
-<div class="eyebrow">WEDDING INVITATION</div>
-<h1>YUTO <span style="font-size:22px">&</span> ARISA</h1>
-<div class="date">2027.01.23</div>
-<div class="intro">OUR SPECIAL DAY</div>
-<p>大切な皆さまへ、感謝を込めて。</p>
-</header>
-<main>
-<section>
-<div class="jp">ご挨拶</div>
-<h2>Welcome</h2>
-<p>私たちの結婚式にご出席いただき<br>ありがとうございます。<br>皆さまと過ごせる一日を<br>心より楽しみにしております。</p>
-</section>
-<section>
-<div class="jp">日時・会場</div>
-<h2>Information</h2>
-<div class="info">
-<p><strong>DATE</strong><br>2027年1月23日（土）</p>
-<p><strong>VENUE</strong><br>明治記念館</p>
-<p>明治神宮での挙式の後、<br>明治記念館にて披露宴を行います。</p>
-</div>
-</section>
-<section>
-<div class="jp">会場のご案内</div>
-<h2>Access</h2>
-<p>明治記念館<br>東京都港区元赤坂2-2-23</p>
-<p><a href="https://www.meijikinenkan.gr.jp/" target="_blank" rel="noopener">会場公式サイトはこちら ↗</a></p>
-</section>
-<section>
-<div class="jp">感謝を込めて</div>
-<h2>Thank You</h2>
-<p>今日という日が、皆さまにとっても<br>素敵な思い出になりますように。</p>
-<p>YUTO & ARISA</p>
-</section>
-</main>
-<footer>WITH LOVE · 2027</footer>
+  <header class="hero">
+    <p class="eyebrow">The Wedding Invitation</p>
+    <h1>
+      YUTO
+      <span class="ampersand">&</span>
+      ARISA
+    </h1>
+    <p class="hero-subtitle">A CELEBRATION OF LOVE</p>
+    <p class="hero-date">23 JANUARY 2027</p>
+    <p class="hero-note">WITH LOVE, WE INVITE YOU TO SHARE OUR DAY</p>
+    <span class="scroll-note">PLEASE SCROLL ↓</span>
+  </header>
+
+  <nav class="navigation" aria-label="ページ内メニュー">
+    <a href="#message">MESSAGE</a>
+    <a href="#date">DATE</a>
+    <a href="#ceremony">CEREMONY</a>
+    <a href="#reception">RECEPTION</a>
+    <a href="#access">ACCESS</a>
+  </nav>
+
+  <main>
+    <section class="section" id="message">
+      <p class="section-label">A Note From Us</p>
+      <h2>ご挨拶</h2>
+      <div class="ornament">✧</div>
+      <p class="intro">
+        このたび 私たちは結婚式を<br>
+        挙げることとなりました。<br><br>
+        これまで支えてくださった皆さまへ<br>
+        感謝の気持ちを込めて<br>
+        ささやかな宴をご用意いたします。<br><br>
+        大切な皆さまと過ごす一日が<br>
+        心に残るひとときとなりますように。<br>
+        皆さまにお会いできますことを<br>
+        心より楽しみにしております。
+      </p>
+      <p class="names">Yuto &amp; Arisa</p>
+    </section>
+
+    <section class="section section-navy" id="date">
+      <p class="section-label">Save The Date</p>
+      <h2>開催日</h2>
+      <div class="ornament">✧</div>
+      <p class="date-large">2027.01.23</p>
+      <p class="date-detail">SATURDAY</p>
+      <p class="intro">
+        令和9年1月23日（土）<br>
+        詳細な開始時刻などは<br>
+        ご案内状にてお知らせいたします。
+      </p>
+    </section>
+
+    <section class="section section-white" id="ceremony">
+      <p class="section-label">The Ceremony</p>
+      <h2>挙式</h2>
+      <div class="event-card">
+        <p class="event-number">01 / CEREMONY</p>
+        <h3>明治神宮</h3>
+        <p>Meiji Jingu</p>
+        <div class="ornament">✧</div>
+        <p>
+          伝統と厳かな雰囲気に包まれた場所で<br>
+          新たな一歩を迎えます。
+        </p>
+        <a class="text-link"
+           href="https://www.meijijingu.or.jp/"
+           target="_blank"
+           rel="noopener noreferrer">
+          OFFICIAL WEBSITE ↗
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="reception">
+      <p class="section-label">The Reception</p>
+      <h2>披露宴</h2>
+      <div class="event-card">
+        <p class="event-number">02 / RECEPTION</p>
+        <h3>明治記念館</h3>
+        <p class="venue-name">Meiji Kinenkan</p>
+        <p>披露宴会場：金鶏の間</p>
+        <div class="ornament">✧</div>
+        <p>
+          お食事とともに、皆さまと笑顔あふれる<br>
+          時間を過ごせますことを楽しみにしております。
+        </p>
+        <a class="text-link"
+           href="https://www.meijikinenkan.gr.jp/"
+           target="_blank"
+           rel="noopener noreferrer">
+          OFFICIAL WEBSITE ↗
+        </a>
+      </div>
+    </section>
+
+    <section class="section section-burgundy" id="access">
+      <p class="section-label">Getting There</p>
+      <h2>アクセス</h2>
+      <div class="ornament">✧</div>
+      <p class="intro">
+        会場へのアクセスや当日の詳細につきましては<br>
+        ご案内状をご確認ください。<br><br>
+        ご不明な点がございましたら<br>
+        お気軽にお問い合わせください。
+      </p>
+      <a class="text-link"
+         href="https://www.meijikinenkan.gr.jp/"
+         target="_blank"
+         rel="noopener noreferrer">
+        VENUE INFORMATION ↗
+      </a>
+    </section>
+
+    <section class="closing">
+      <p class="closing-title">With Love</p>
+      <div class="ornament">✧</div>
+      <p>
+        皆さまとお会いできる日を<br>
+        心より楽しみにしております。
+      </p>
+      <p class="names">YUTO &amp; ARISA</p>
+      <p class="date-detail">23 JANUARY 2027</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>YUTO &amp; ARISA</p>
+    <small>THANK YOU FOR BEING PART OF OUR STORY</small>
+  </footer>
 </body>
 </html>
+
 
